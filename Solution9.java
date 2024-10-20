@@ -45,8 +45,11 @@ import java.util.List;
 class Solution9 {
 
     public boolean possibleBipartition(int n, int[][] dislikes) {
+        // 用于记录每个人的组（颜色），-1 表示未分组
         int[] fa = new int[n + 1];
         Arrays.fill(fa, -1);
+        
+         // 创建一个邻接表来表示图
         List<Integer>[] g = new List[n + 1];
 
         for (int i = 0; i <= n; ++i) {
